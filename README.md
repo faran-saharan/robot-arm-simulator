@@ -7,7 +7,7 @@ A 2-joint robot arm that runs in the browser. Move your mouse and the arm follow
 ![The robot arm reaching for a point](docs/follow.png)
 
 ## Why I made it
-I worked with industrial robots during my co-op at ATS as well as Camcor (division of Linamar), and I wanted to understand how a robot figures out what angles to put its joints at to reach a point.
+I worked with industrial robots during my interns at ATS as well as Camcor (division of Linamar), and I wanted to understand how a robot figures out what angles to put its joints at to reach a point.
 
 ## What it does
 - **Follow the mouse:** the arm reaches for your mouse. The blue circle shows the furthest it can reach. Go outside it and the arm stretches as far as it can and the readout says "Out of reach".
