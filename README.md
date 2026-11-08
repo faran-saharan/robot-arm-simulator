@@ -7,7 +7,7 @@ A 2-joint robot arm that runs in the browser. Move your mouse and the arm follow
 ![The robot arm reaching for a point](docs/follow.png)
 
 ## Why I made it
-I worked with industrial robots during my co-op at Camcor, and I wanted to understand how a robot figures out what angles to put its joints at to reach a point.
+I worked with industrial robots during my co-op at ATS as well as Camcor (division of Linamar), and I wanted to understand how a robot figures out what angles to put its joints at to reach a point.
 
 ## What it does
 - **Follow the mouse:** the arm reaches for your mouse. The blue circle shows the furthest it can reach. Go outside it and the arm stretches as far as it can and the readout says "Out of reach".
@@ -19,7 +19,7 @@ I worked with industrial robots during my co-op at Camcor, and I wanted to under
 There are two directions to the math, both in `js/kinematics.js`:
 
 - **Forward kinematics** (the joint sliders): you know the joint angles and work out where the tip is. This is just adding up the two links with sin and cos.
-- **Inverse kinematics** (following the mouse): you know where you want the tip and work out the joint angles. The distance to the target tells you how much the elbow has to bend (law of cosines), then the shoulder points at the target with a correction for the bend.
+- **Inverse kinematics** (following the mouse): you know where you want the tip and work out the joint angles. The distance to the target tells you how much the elbow has to bend, then the shoulder points at the target with a correction for the bend.
 
 ## Run it yourself
 Download the repo and open `index.html` in your browser. Nothing to install.
