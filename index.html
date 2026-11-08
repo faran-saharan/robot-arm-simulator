@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Robot Arm Sim</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <section class="stage">
+      <canvas id="view"></canvas>
+      <div class="hint" id="hint">Move your mouse over the grid, or drag the joint sliders</div>
+    </section>
+
+    <aside class="panel">
+      <header>
+        <h1>Robot Arm Sim</h1>
+        <p>2-link arm with inverse kinematics</p>
+      </header>
+
+      <div class="group readout">
+        <div><span>θ1</span><b id="r-t1">0°</b></div>
+        <div><span>θ2</span><b id="r-t2">0°</b></div>
+        <div><span>x</span><b id="r-x">0</b></div>
+        <div><span>y</span><b id="r-y">0</b></div>
+        <p id="r-status" class="status"></p>
+      </div>
+
+      <div class="group">
+        <h2>Joints</h2>
+        <label>Shoulder θ1 <output id="o-j1"></output>
+          <input type="range" id="j1" min="-180" max="180" step="1" value="60">
+        </label>
+        <label>Elbow θ2 <output id="o-j2"></output>
+          <input type="range" id="j2" min="-180" max="180" step="1" value="-90">
+        </label>
+      </div>
+
+      <div class="group">
+        <h2>Arm</h2>
+        <label>Link 1 <output id="o-l1"></output>
+          <input type="range" id="l1" min="60" max="220" step="5" value="160">
+        </label>
+        <label>Link 2 <output id="o-l2"></output>
+          <input type="range" id="l2" min="60" max="180" step="5" value="120">
+        </label>
+        <div class="row">
+          <label class="check"><input type="checkbox" id="flip"> Flip elbow</label>
+        </div>
+      </div>
+
+      <footer class="small muted">
+        Lengths in mm. Blue circle = furthest the tip can reach.
+      </footer>
+    </aside>
+  </main>
+
+  <script src="js/kinematics.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
