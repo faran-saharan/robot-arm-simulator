@@ -1,0 +1,10 @@
+{
+  "name": "robot-arm-sim",
+  "version": "1.0.0",
+  "private": true,
+  "description": "2-link robot arm simulator with inverse kinematics",
+  "scripts": {
+    "test": "node --test"
+  },
+  "license": "MIT"
+}
